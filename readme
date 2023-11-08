@@ -1,18 +1,18 @@
 # docker hub para machine learning
 https://hub.docker.com/r/mathworks/matlab-deep-learning
 
-# mac address
+# mac address para o .lic
 https://www.mathworks.com/matlabcentral/answers/101892-what-is-a-host-id-how-do-i-find-my-host-id-in-order-to-activate-my-license?s_tid=srchtitle
 
-# license file
+# license file .lic
 https://www.mathworks.com/login?uri=%2Flicensecenter%2Ftrials%2F11753891%2Fend_users
 
-# vast customização
+# vastai customização
 https://cloud.vast.ai/templates/edit/
 
-# chamada docker 
+# chamada docker padrão com .lic local
 docker run -it --rm --mac-address 02:42:AC:11:00:02 -v /vagrant/license.lic:/licenses/license.lic -e MLM_LICENSE_FILE=/licenses/license.lic -p 8888:8888 --shm-size=512M mathworks/matlab-deep-learning:r2023b -browser
 
 # chamada vastai
-# docker build --no-cache -t teste .
-docker run -it --rm -e google=XXX --mac-address 02:42:AC:11:00:02 -p 8888:8888 --shm-size=512M teste:latest
+# docker build --no-cache -t jnognet/matlab_docker_vastai:lastest .
+docker run -it --rm -e google=XXX --mac-address 02:42:AC:11:00:02 -p 8888:8888 --shm-size=512M jnognet/matlab_docker_vastai:lastest
